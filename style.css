@@ -1,0 +1,120 @@
+body {
+    background-color: #111827;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #a5b4fc;
+}
+
+h2 {
+    color: #93c5fd;
+}
+
+h3 {
+    color: #04e6f7;
+}
+
+#introduction {
+    background-color: #384c68;
+    padding: 20px;
+    margin: 20px 0;
+    border: 2px solid #374151;
+    border-radius: 10px;
+}
+
+#introduction p {
+    max-width: 700px;
+}
+
+#tableOfContents ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+
+    flex-wrap: wrap;
+}
+
+#tableOfContents a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+
+    transition: color 0.5s ease;
+}
+
+#tableOfContents a:hover, 
+#tableOfContents a:focus-visible {
+    color: #04e6f7;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #1f2937;
+    padding: 20px;
+    margin: 0;
+    border: 2px solid #374151;
+    border-radius: 10px;
+    min-width: 0;
+
+
+    transition: transform 0.5s ease, border-color 0.5s ease;
+}
+
+.project-card p {
+    line-height: 1.6;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #93c5fd;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.project-card video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.main-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+@media (max-width: 600px) {
+
+    .main-container {
+        padding: 15px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .project-card {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}
