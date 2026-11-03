@@ -1,5 +1,18 @@
+:root {
+    --background-color: #111827;
+    --card-color: #1f2937;
+    --border-color: #374151;
+    --heading-color: #93c5fd;
+    --accent-color: #a0f9ff;
+    --card-radius: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #111827;
+    background-color: var(--background-color);
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 16px;
@@ -11,19 +24,19 @@ h1 {
 }
 
 h2 {
-    color: #93c5fd;
+    color: var(--heading-color);
 }
 
 h3 {
-    color: #04e6f7;
+    color: var(--accent-color);
 }
 
 #introduction {
     background-color: #384c68;
     padding: 20px;
     margin: 20px 0;
-    border: 2px solid #374151;
-    border-radius: 10px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--card-radius);
 }
 
 #introduction p {
@@ -49,7 +62,7 @@ h3 {
 
 #tableOfContents a:hover, 
 #tableOfContents a:focus-visible {
-    color: #04e6f7;
+    color: var(--accent-color);
 }
 
 .project-container {
@@ -59,11 +72,11 @@ h3 {
 }
 
 .project-card {
-    background-color: #1f2937;
+    background-color: var(--card-color);
     padding: 20px;
     margin: 0;
-    border: 2px solid #374151;
-    border-radius: 10px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--card-radius);
     min-width: 0;
 
 
@@ -76,7 +89,7 @@ h3 {
 
 .project-card:hover {
     transform: translateY(-5px);
-    border-color: #93c5fd;
+    border-color: var(--heading-color);
 }
 
 .project-card img {
