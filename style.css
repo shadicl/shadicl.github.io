@@ -27,6 +27,7 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 16px;
     line-height: 1.6;
+    margin: 0;
 }
 
 h1 {
@@ -35,6 +36,16 @@ h1 {
 
 h2 {
     color: var(--heading-color);
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    margin-top: 8px;
+    background-color: var(--accent-color);
+    border-radius: 10px;
 }
 
 h3 {
@@ -125,6 +136,11 @@ h3 {
     border-radius: 8px;
     display: block;
     margin-bottom: 15px;
+}
+
+.project-card h3::before {
+    content: "◆ ";
+    color: var(--accent-color);
 }
 
 .main-container {
