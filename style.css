@@ -111,8 +111,8 @@ h3 {
     border-radius: var(--card-radius);
     min-width: 0;
 
-
-    transition: transform 0.5s ease, border-color 0.5s ease;
+    transition: transform 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .project-card p {
@@ -122,6 +122,7 @@ h3 {
 .project-card:hover {
     transform: translateY(-5px);
     border-color: var(--heading-color);
+    box-shadow: 0 8px 20px rgba(160, 249, 255, 0.15);
 }
 
 .project-card img {
@@ -172,5 +173,13 @@ h3 {
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
+    }
+
+    .project-card {
+        transition: none;
+    }
+
+    .project-card:hover {
+        transform: none;
     }
 }
