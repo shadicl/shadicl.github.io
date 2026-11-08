@@ -38,10 +38,12 @@ body {
 
 h1 {
     color: #a5b4fc;
+    font-size: clamp(26px, calc(20px + 2vw), 42px);
 }
 
 h2 {
     color: var(--heading-color);
+    font-size: clamp(22px, 3vw, 32px);
 }
 
 h2::after {
@@ -169,10 +171,6 @@ h3 {
 
     .project-card {
         padding: 15px;
-    }
-
-    h1 {
-        font-size: 26px;
     }
 }
 
