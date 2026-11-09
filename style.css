@@ -133,19 +133,12 @@ h3 {
     box-shadow: 0 8px 20px rgba(160, 249, 255, 0.15);
 }
 
-.project-card img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: contain;
-    border-radius: 8px;
-
-    object-position: center;
-}
-
+.project-card img,
 .project-card video {
+    display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
-    object-fit: contain;
+    height: auto;
     border-radius: 8px;
 }
 
