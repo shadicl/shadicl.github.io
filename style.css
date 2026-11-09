@@ -134,17 +134,19 @@ h3 {
 }
 
 .project-card img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    border-radius: 8px;
+
+    object-position: center;
 }
 
 .project-card video {
     width: 100%;
-    max-width: 100%;
-    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
     border-radius: 8px;
-    display: block;
-    margin-bottom: 15px;
 }
 
 .project-card h3::before {
