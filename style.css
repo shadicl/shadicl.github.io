@@ -5,6 +5,12 @@
     --heading-color: #93c5fd;
     --accent-color: #a0f9ff;
     --card-radius: 10px;
+
+    --space-xs: 5px;
+    --space-sm: 10px;
+    --space-md: 15px;
+    --space-lg: 25px;
+    --space-x1: 40px;
 }
 
 * {
@@ -78,14 +84,14 @@ h3 {
     z-index: 10;
 
     background-color: var(--background-color);
-    padding: 15px;
+    padding: var(--space-md);
     border: 2px solid var(--border-color);
     border-radius: var(--card-radius);
 }
 
 #tableOfContents ul {
     display: flex;
-    gap: 20px;
+    gap: var(--space-lg);
     list-style: none;
     padding: 0;
 
@@ -95,7 +101,7 @@ h3 {
 #tableOfContents a {
     color: white;
     text-decoration: none;
-    padding: 10px;
+    padding: var(--space-sm);
 
     transition: color 0.5s ease;
 }
@@ -108,12 +114,12 @@ h3 {
 .project-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: var(--space-lg);
 }
 
 .project-card {
     background-color: var(--card-color);
-    padding: 20px;
+    padding: var(--space-lg);
     margin: 0;
     border: 2px solid var(--border-color);
     border-radius: var(--card-radius);
@@ -156,16 +162,16 @@ h3 {
 @media (max-width: 600px) {
 
     .main-container {
-        padding: 15px;
+        padding: var(--space-md);
     }
 
     .project-container {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: var(--space-md);
     }
 
     .project-card {
-        padding: 15px;
+        padding: var(--space-md);
     }
 }
 
