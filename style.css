@@ -133,10 +133,13 @@ h3 {
     line-height: 1.6;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--heading-color);
-    box-shadow: 0 8px 20px rgba(160, 249, 255, 0.15);
+.project-card img {
+    filter: brightness(0.9);
+    transition: filter 0.3s ease;
+}
+
+.project-card:hover img {
+    filter: brightness(1);
 }
 
 .project-card img,
@@ -151,6 +154,16 @@ h3 {
 .project-card h3::before {
     content: "◆ ";
     color: var(--accent-color);
+}
+
+.project-card:nth-child(odd) {
+    border-color: var(--heading-color);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: 0 8px 20px rgba(160, 249, 255, 0.15);
 }
 
 .main-container {
@@ -176,6 +189,10 @@ h3 {
     }
 
     .project-card {
+        transition: none;
+    }
+
+    .project-card img {
         transition: none;
     }
 
