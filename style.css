@@ -153,6 +153,10 @@ h3 {
     border-radius: 8px;
 }
 
+.project-card video {
+    margin-top: var(--space-sm);
+}
+
 .project-card h3::before {
     content: "◆ ";
     color: var(--accent-color);
@@ -166,6 +170,25 @@ h3 {
     transform: translateY(-5px);
     border-color: var(--accent-color);
     box-shadow: 0 8px 20px rgba(160, 249, 255, 0.15);
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.engine-label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    background-color: var(--background-color);
+    color: var(--accent-color);
+
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 14px;
 }
 
 .main-container {
