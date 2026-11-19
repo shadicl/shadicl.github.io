@@ -129,6 +129,31 @@ h3 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 
     overflow-wrap: anywhere;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card > a {
+    margin-top: auto;
+    align-self: stretch;
+    text-align: center;
+
+    display: inline-block;
+    background-color: var(--background-color);
+    color: var(--accent-color);
+
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    text-decoration: none;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-card > a:hover {
+    background-color: var(--accent-color);
+    color: var(--background-color);
 }
 
 .project-card p {
@@ -223,5 +248,15 @@ h3 {
 
     .project-card:hover {
         transform: none;
+    }
+
+    .project-card > a {
+        transition: none;
+    }
+
+    .project-card > a:hover,
+    .project-card > a:focus-visible {
+        background-color: var(--accent-color);
+        color: var(--background-color);
     }
 }
