@@ -1,16 +1,36 @@
 console.log("Portfolio loaded successfully!");
 
-let projectCount = 5;
+const projectNames = [
+    "Difficulty Chart",
+    "Universal Survival",
+    "Skeplete",
+    "Natural Volcano Survival",
+    "The Unseen"
+];
 
-projectCount = 6;
+console.log(projectNames[0])
+console.log(projectNames[4]);
+console.log(projectNames.length);
 
-console.log(projectCount); // 6
+projectNames.push("Bob's Burgers");
+
+console.log(projectNames.length);
+
+projectNames.pop();
+
+for (const name of projectNames) {
+    console.log(name);
+}
+
+projectNames.forEach((name) => {
+        console.log(name);
+});
 
 const portfolioName = "Steven's Portfolio";
 
 //portfolioName = "New Portfolio"; // Error
 
-console.log(`My portfolio contains ${projectCount} projects.`);
+console.log(`My portfolio contains ${projectNames.length} projects.`);
 
 function greetVisitor() {
     console.log("Welcome to my portfolio!");
