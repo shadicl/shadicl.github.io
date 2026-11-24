@@ -66,3 +66,20 @@ for (const project of unrealProjects) {
 for (const project of projects) {
     console.log(`${project.name} was made with ${project.engine} using ${project.language}.`);
 }
+
+const projectsSection = document.querySelector("#projects");
+const projectCards = document.querySelectorAll(".project-card");
+
+console.log(projectCards.length); // 5
+
+projectCards.forEach((card) => {
+    console.log(card);
+});
+
+const projectsHeading = document.querySelector("#projects-heading");
+
+projectsHeading.textContent = `Projects (${projects.length})`;
+
+const firstCard = document.querySelector(".project-card");
+
+firstCard.classList.add("highlighted");

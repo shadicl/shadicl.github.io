@@ -222,6 +222,16 @@ h3 {
     padding: 50px;
 }
 
+.project-card.highlighted {
+    border-color: gold;
+}
+
+.project-card > a:hover,
+.project-card > a:focus-visible {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
 @media (max-width: 600px) {
 
     .main-container {
@@ -252,11 +262,5 @@ h3 {
 
     .project-card > a {
         transition: none;
-    }
-
-    .project-card > a:hover,
-    .project-card > a:focus-visible {
-        background-color: var(--accent-color);
-        color: var(--background-color);
     }
 }
