@@ -82,4 +82,14 @@ projectsHeading.textContent = `Projects (${projects.length})`;
 
 const firstCard = document.querySelector(".project-card");
 
-firstCard.classList.add("highlighted");
+const highlightButton = document.querySelector("#highlight-button");
+
+highlightButton.addEventListener("click", () => {
+    const isHighlighted = firstCard.classList.toggle("highlighted");
+
+    if (isHighlighted) {
+        highlightButton.textContent = "Remove Highlight";
+    } else {
+        highlightButton.textContent = "Add Highlight";
+    }
+});

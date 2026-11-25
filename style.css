@@ -151,11 +151,6 @@ h3 {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.project-card > a:hover {
-    background-color: var(--accent-color);
-    color: var(--background-color);
-}
-
 .project-card p {
     line-height: 1.6;
 }
@@ -230,6 +225,16 @@ h3 {
 .project-card > a:focus-visible {
     background-color: var(--accent-color);
     color: var(--background-color);
+}
+
+#highlight-button {
+    background-color: var(--card-color);
+    color: var(--accent-color);
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--accent-color);
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: var(--space-md);
 }
 
 @media (max-width: 600px) {
