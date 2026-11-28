@@ -72,10 +72,6 @@ const projectCards = document.querySelectorAll(".project-card");
 
 console.log(projectCards.length); // 5
 
-projectCards.forEach((card) => {
-    console.log(card);
-});
-
 const projectsHeading = document.querySelector("#projects-heading");
 
 projectsHeading.textContent = `Projects (${projects.length})`;
@@ -85,11 +81,17 @@ const firstCard = document.querySelector(".project-card");
 const highlightButton = document.querySelector("#highlight-button");
 
 highlightButton.addEventListener("click", () => {
-    const isHighlighted = firstCard.classList.toggle("highlighted");
+    console.log(card.dataset.engine);
+});
 
-    if (isHighlighted) {
-        highlightButton.textContent = "Remove Highlight";
-    } else {
-        highlightButton.textContent = "Add Highlight";
+console.log(firstCard.dataset.engine);
+console.log(firstCard.dataset.language);
+
+projectCards.forEach((card) => {
+    
+    console.log(card.dataset.engine);
+
+    if (card.dataset.engine == "Roblox") {
+        card.classList.add("highlighted");
     }
 });
