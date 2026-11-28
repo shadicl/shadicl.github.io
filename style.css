@@ -227,7 +227,12 @@ h3 {
     color: var(--background-color);
 }
 
-#highlight-button {
+.project-card.hidden {
+    display: none;
+}
+
+#highlight-button,
+#hidden-button {
     background-color: var(--card-color);
     color: var(--accent-color);
     padding: var(--space-sm) var(--space-md);

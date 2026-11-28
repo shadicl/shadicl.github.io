@@ -40,6 +40,10 @@ function getProjectsByLanguage(language) {
     return projects.filter(project => project.language === language);
 }
 
+function setCardVisibility(card, isVisible) {
+    card.classList.toggle("hidden", !isVisible);
+}
+
 const robloxProjects = getProjectsByEngine("Roblox");
 const unityProjects = getProjectsByEngine("Unity 2D");
 const unrealProjects = getProjectsByEngine("Unreal Engine");
@@ -79,10 +83,23 @@ projectsHeading.textContent = `Projects (${projects.length})`;
 const firstCard = document.querySelector(".project-card");
 
 const highlightButton = document.querySelector("#highlight-button");
+const hiddenButton = document.querySelector("#hidden-button");
 
-highlightButton.addEventListener("click", () => {
-    console.log(card.dataset.engine);
-});
+let robloxVisible = true;
+
+hiddenButton.addEventListener("click", () => {
+    
+    robloxVisible = !robloxVisible;
+
+    projectCards.forEach((card) => {
+
+        if (card.dataset.engine == "Roblox") {
+            setCardVisibility(card, robloxVisible);
+        }
+    });
+
+    hiddenButton.textContent = robloxVisible ? "Hide Roblox Projects" : "Show Roblox Projects";
+})
 
 console.log(firstCard.dataset.engine);
 console.log(firstCard.dataset.language);
@@ -92,6 +109,6 @@ projectCards.forEach((card) => {
     console.log(card.dataset.engine);
 
     if (card.dataset.engine == "Roblox") {
-        card.classList.add("highlighted");
+        console.log(card.dataset.engine);
     }
 });
